@@ -189,8 +189,20 @@ tr th {
     font-weight: 600 !important;
     padding: 15px !important;
 }
+ul.currency-menu {
+    padding: 0;
+}
 
+ul.growth-menu {
+    margin: 0;
+    padding: 0;
+}
 
+.sidebar.mt-3 {
+    margin-bottom: 22px;
+}
+
+ 
 
 
 
@@ -206,6 +218,9 @@ tr th {
   .title h2{
     font-size: 25px;
   }
+   p.lead {
+    font-size: 17px;
+}
 
   ul.currency-menu li a{
   font-size: 13px;
