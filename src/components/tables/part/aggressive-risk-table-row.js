@@ -36,7 +36,7 @@ export const AggressiveTableRow = ({ totalCapital, level, totalLevels, currencyS
         return addCommnas(Math.round(balance * 0.25));
     }
     const calculateMaxStopLoss = (balance) => {
-        return 'Not required';
+        return 'N/A';
     }
     const addCommnas = (num) => {
         return currencySymbol + num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");

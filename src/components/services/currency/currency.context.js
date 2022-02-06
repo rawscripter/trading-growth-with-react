@@ -7,14 +7,15 @@ export const CurrencyProvider = ({ children }) => {
     const currencyFunds =
     {
         USD: [90000, 60000, 40000, 14000],
-        GBP: [80000, 36000, 50000, 12000],
-        EURO: [70000, 40000, 30000, 10000],
+        GBP: [70000, 40000, 30000, 10000],
+        EURO: [80000, 36000, 50000, 12000],
     }
 
-    const [currency, setCurrency] = useState('GBP');
+    const [currency, setCurrency] = useState('USD');
     const [currencySymbol, setCurrencySymbol] = useState('$');
     const [selectedFund, setSelectedFund] = useState(currencyFunds.USD[0]);
     const [foundLevel, setFoundLevel] = useState(8);
+    const [riskType, setRiskType] = useState('low');
 
 
 
@@ -56,7 +57,9 @@ export const CurrencyProvider = ({ children }) => {
             setCurrency,
             setSelectedFund,
             selectedFund,
-            foundLevel
+            foundLevel,
+            riskType,
+            setRiskType
         }}>
             {children}
         </CurrencyContext.Provider>
