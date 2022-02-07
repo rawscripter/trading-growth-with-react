@@ -5,10 +5,8 @@ import classes from '../styles/Header.module.css'
 import { CurrencyContext } from '../services/currency/currency.context';
 
 const TradingGrowth = () => {
-    const { currency, currencyFunds, setSelectedFund, selectedFund, riskType } = React.useContext(CurrencyContext);
-    const thousandToK = (num) => {
-        return num > 999 ? (num / 1000).toFixed(0) + 'K' : num;
-    }
+    const { currency, currencySymbol, currencyFunds, setSelectedFund, selectedFund, riskType } = React.useContext(CurrencyContext);
+
     return (
         <div className='trading-growth-schedule my-5'>
             <div className="container">
@@ -29,7 +27,7 @@ const TradingGrowth = () => {
                                         }
                                         key={index} >
                                         <p className='lead m-0'>
-                                            <strong>{thousandToK(fund)} {riskType.toUpperCase()}  </strong>
+                                            <strong>{currencySymbol}{fund} {riskType.toUpperCase()}  </strong>
                                         </p>
                                     </div>
                                 )
