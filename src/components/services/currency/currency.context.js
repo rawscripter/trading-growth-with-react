@@ -15,7 +15,7 @@ export const CurrencyProvider = ({ children }) => {
     const [currencySymbol, setCurrencySymbol] = useState('$');
     const [selectedFund, setSelectedFund] = useState(currencyFunds.USD[0]);
     const [foundLevel, setFoundLevel] = useState(8);
-    const [riskType, setRiskType] = useState('low');
+    const [riskType, setRiskType] = useState('low risk');
 
 
 

@@ -1,10 +1,8 @@
 import React, { useEffect, useContext } from 'react';
-import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import euroImg from '../../images/euro-icon-removebg-preview.png';
 import gbpImg from '../../images/gbp-icon-removebg-preview.png';
 import usdImg from '../../images/usd-icon-removebg-preview.png'
-import classes from '../styles/Header.module.css';
 import { CurrencyContext } from '../services/currency/currency.context';
 
 const Navigation = () => {
@@ -22,24 +20,26 @@ const Navigation = () => {
                                 <NavLink className={currency === "USD" ? 'active-link' : ''} onClick={() => setCurrency('USD')} to=''>
                                     <img src={usdImg} alt="" /> USD
                                 </NavLink>
-                                <NavLink className={currency === "GBP" ? 'active-link' : ''} to='' onClick={() => setCurrency('GBP')}>
-                                    <img src={gbpImg} alt="" /> GBP
-                                </NavLink>
 
                                 <NavLink className={currency === "EURO" ? 'active-link' : ''} to='' onClick={() => setCurrency('EURO')}>
                                     <img src={euroImg} alt="" /> EUR
                                 </NavLink>
+
+                                <NavLink className={currency === "GBP" ? 'active-link' : ''} to='' onClick={() => setCurrency('GBP')}>
+                                    <img src={gbpImg} alt="" /> GBP
+                                </NavLink>
+
                             </li>
                         </ul>
                     </div>
                     <div className="col-lg-5">
                         <ul className='growth-menu'>
-                            <h4><strong>Low Risk</strong></h4>
+                            <h4><strong>Risk</strong></h4>
                             <li>
-                                <NavLink onClick={() => setRiskType('low')} to='/' className={(navInfo) => navInfo.isActive ? 'active-link' : 'not-active'}>
+                                <NavLink onClick={() => setRiskType('Low Risk')} to='/' className={(navInfo) => navInfo.isActive ? 'active-link' : 'not-active'}>
                                     Low Risk
                                 </NavLink>
-                                <NavLink onClick={() => setRiskType('aggresive')} to='/aggresive' className={(navInfo) => navInfo.isActive ? 'active-link' : 'not-active'}>
+                                <NavLink onClick={() => setRiskType('Aggressive')} to='/aggresive' className={(navInfo) => navInfo.isActive ? 'active-link' : 'not-active'}>
                                     Aggressive
                                 </NavLink>
                             </li>

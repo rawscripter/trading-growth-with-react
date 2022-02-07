@@ -248,5 +248,15 @@ ul.growth-menu {
 .col-md-9 {
     margin-top: 25px;
 }
+.fs-sm 
+{
+    font-size: 11px;
+    }
 
+    .table tr td{
+        font-size: 13px;
+    }
+    tr.no-border, tr th{
+      font-size: 13px;
+    }
 }

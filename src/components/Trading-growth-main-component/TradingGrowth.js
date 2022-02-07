@@ -29,7 +29,7 @@ const TradingGrowth = () => {
                                         }
                                         key={index} >
                                         <p className='lead m-0'>
-                                            <strong>{thousandToK(fund)} {riskType.toUpperCase()} RISK </strong>
+                                            <strong>{thousandToK(fund)} {riskType.toUpperCase()}  </strong>
                                         </p>
                                     </div>
                                 )

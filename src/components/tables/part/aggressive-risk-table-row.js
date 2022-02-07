@@ -36,7 +36,7 @@ export const AggressiveTableRow = ({ totalCapital, level, totalLevels, currencyS
         return addCommnas(Math.round(balance * 0.25));
     }
     const calculateMaxStopLoss = (balance) => {
-        return 'N/A';
+        return 'Not required';
     }
     const addCommnas = (num) => {
         return currencySymbol + num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -64,7 +64,7 @@ export const AggressiveTableRow = ({ totalCapital, level, totalLevels, currencyS
             <td>{calculateMaxLoss(fundingBalance)}</td>
             <td>1:30</td>
             <td>{calculateProfitSplit(level)}</td>
-            <td>{calculateMaxStopLoss(fundingBalance)}</td>
+            <td><span className='fs-sm'>{calculateMaxStopLoss(fundingBalance)}</span></td>
         </tr>
     )
 }
