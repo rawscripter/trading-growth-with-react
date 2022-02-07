@@ -1,11 +1,15 @@
 import React from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
-import classes from '../styles/Header.module.css'
 import { CurrencyContext } from '../services/currency/currency.context';
 
 const TradingGrowth = () => {
     const { currency, currencySymbol, currencyFunds, setSelectedFund, selectedFund, riskType } = React.useContext(CurrencyContext);
+
+
+    const addCommnas = (num) => {
+        return currencySymbol + num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
 
     return (
         <div className='trading-growth-schedule my-5'>
@@ -27,7 +31,7 @@ const TradingGrowth = () => {
                                         }
                                         key={index} >
                                         <p className='lead m-0'>
-                                            <strong>{currencySymbol}{fund} {riskType.toUpperCase()}  </strong>
+                                            <strong>{addCommnas(fund)} {riskType.toUpperCase()}  </strong>
                                         </p>
                                     </div>
                                 )
