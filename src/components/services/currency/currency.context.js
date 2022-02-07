@@ -20,7 +20,7 @@ export const CurrencyProvider = ({ children }) => {
 
 
     useEffect(() => {
-        if (currencyFunds[currency][0] === selectedFund) {
+        if (currencyFunds[currency][3] === selectedFund) {
             setFoundLevel(8);
         } else {
             setFoundLevel(7);
