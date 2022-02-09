@@ -8,7 +8,7 @@ export const CurrencyProvider = ({ children }) => {
     {
         USD: [90000, 60000, 40000, 14000],
         GBP: [70000, 40000, 30000, 10000],
-        EURO: [80000, 36000, 50000, 12000],
+        EURO: [80000, 50000, 36000, 12000],
     }
 
     const [currency, setCurrency] = useState('USD');

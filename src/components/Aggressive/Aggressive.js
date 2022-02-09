@@ -6,9 +6,7 @@ const Aggressive = () => {
     return (
         <div className='trading-growth-schedule my-5'>
             <div className="container">
-                <div className="title text-center mt-5">
-                    <h2 className='mb-5'>Trading Growth Schedule</h2>
-                </div>
+
                 <Navigation></Navigation>
                 <div className="row">
                     <div className="col-md-3">
